@@ -1,0 +1,18 @@
+version: '3'
+
+networks:
+  nginx_proxy_network:
+    external:
+      name: nginx_proxy_network
+
+services:
+  php:
+    image: library/php:7.4.7-apache
+    restart: "no"
+    networks:
+      - nginx_proxy_network
+    environment:
+      VIRTUAL_HOST: strategio.digital,www.strategio.digital
+      LETSENCRYPT_HOST: strategio.digital,www.strategio.digital
+    volumes:
+      - ./www:/var/www/html
