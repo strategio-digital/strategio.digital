@@ -13,7 +13,7 @@ services:
       - nginx_proxy_network
     environment:
       VIRTUAL_HOST: strategio.digital
-      VIRTUAL_HOST_ALIAS: www.strategio.digital
-      LETSENCRYPT_HOST: strategio.digital,www.strategio.digital
+      VIRTUAL_HOST_ALIAS: www.strategio.digital,strategio.dev,www.strategio.dev,strategio-digital.cz,www.strategio-digital.cz,strategio.app, www.strategio.app
+      LETSENCRYPT_HOST: strategio.digital,www.strategio.digital,strategio.dev,www.strategio.dev,strategio-digital.cz,www.strategio-digital.cz,strategio.app, www.strategio.app
     volumes:
       - ./www:/var/www/html
