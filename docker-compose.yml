@@ -7,7 +7,7 @@ networks:
 
 services:
   php:
-    image: library/php:7.4.7-apache
+    image: library/php:8.0-rc-apache
     restart: "always"
     networks:
       - nginx_proxy_network
