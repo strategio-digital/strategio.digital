@@ -15,7 +15,9 @@
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/utilities";
 
@@ -27,3 +29,7 @@
 @import "components/type";
 @import "components/list";
 @import "components/button";
+@import "components/modal";
+@import "components/contact-modal";
+@import "components/contact-person";
+@import "components/form";

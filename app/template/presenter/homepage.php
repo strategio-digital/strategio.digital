@@ -4,7 +4,7 @@
  * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
  */
 declare(strict_types=1);
-$content = file_get_contents(__DIR__ . '/../../html/temp/static/manifest.json');
+$content = file_get_contents(__DIR__ . '/../../../html/temp/static/manifest.json');
 $json = json_decode($content, TRUE);
 ?>
 <!doctype html>
@@ -16,7 +16,7 @@ $json = json_decode($content, TRUE);
     <meta name="description" content="Postavte se k webu tak, aby Vám už první den po spuštění přiváděl zákazníky a vydělával reálné peníze.">
     <link rel="stylesheet" href="/temp/static/css/<?= $json['sys-frontend-build.css'] ?>">
 </head>
-<body class="position-relative">
+<body class="">
 <div class="container">
     <div class="logo">
         <div class="title">Strategio</div>
@@ -48,5 +48,7 @@ $json = json_decode($content, TRUE);
 </div>
 
 <script src="/temp/static/js/<?= $json['sys-frontend-build.js'] ?>"></script>
+
+<?php require_once __DIR__ . '/../component/contact-modal.php' ?>
 </body>
 </html>

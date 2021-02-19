@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) 2019 Wakers.cz
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+.modal {
+  background-color: $blue-dark;
+  overflow: scroll;
+
+  .modal-overlay {
+    opacity: .1;
+    position: absolute;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  .modal-dialog {
+    max-width: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .modal-content {
+      border: none;
+      background-color: transparentize($blue-dark, .1);
+      color: $white;
+    }
+  }
+}

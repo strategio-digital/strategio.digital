@@ -1,0 +1,36 @@
+/**
+ * Copyright (c) 2019 Wakers.cz
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+.form-control {
+  padding: 1.5rem 1rem;
+  background-color: $gray-100;
+
+  &:active,
+  &:focus {
+    background-color: $gray-100;
+    border-color: $blue;
+  }
+
+  &::placeholder {
+    color: $gray-600;
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: $blue;
+  }
+
+  &.is_invalid {
+    background-color: lighten($red, 40%);
+    border: 1px solid $red;
+    color: $red;
+  }
+}
+
+.invalid_feedback {
+  margin-top: 7px;
+  display: block;
+  color: $red;
+  font-size: .85rem;
+}

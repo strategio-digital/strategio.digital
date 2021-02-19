@@ -31,8 +31,13 @@ module.exports = function ()
             // Bootstrap
             './node_modules/bootstrap/js/dist/index.js',
             './node_modules/bootstrap/js/dist/util.js',
+            './node_modules/bootstrap/js/dist/button.js',
+            './node_modules/bootstrap/js/dist/modal.js',
             './node_modules/bootstrap/js/dist/tooltip.js',
             './assets/static/js/bootstrap.js',
+
+            // Contact form
+            './assets/static/js/contact-form.js',
 
             // Conversion
             './assets/static/js/conversion-handler.js',
