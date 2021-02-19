@@ -5,7 +5,9 @@
     ],
     "license": "UNLICENSED",
     "dependencies": {
-        "jquery": "^3.5.1"
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1"
     },
     "devDependencies": {
         "files-exist": "^1.1.0",

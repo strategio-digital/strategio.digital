@@ -12,31 +12,37 @@ $json = json_decode($content, TRUE);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Powerful marketing abilities | Result oriented thinking | Advanced strategies | Friendly pricing | Webdesign, UX, PPC, CRO that boosts Your business.">
-    <title>STRATEGIO digital - Get more customers, orders, leads or interests</title>
-
+    <title>Stavíme ziskové weby a marketing, jsme Strategio Digital</title>
+    <meta name="description" content="Postavte se k webu tak, aby Vám už první den po spuštění přiváděl zákazníky a vydělával reálné peníze.">
     <link rel="stylesheet" href="/temp/static/css/<?= $json['sys-frontend-build.css'] ?>">
 </head>
-<body>
+<body class="position-relative">
 <div class="container">
-    <div>
-        <div>
-            <h1 class="title" style="">
-                STRATEGIO<span style="font-size: 16px; font-weight: bold">.digital</span>
-            </h1>
+    <div class="logo">
+        <div class="title">Strategio</div>
+        <div class="sub-title">.digital</div>
+    </div>
+</div>
 
-            <p class="sub-title">
-                powerful marketing abilities
-            </p>
-
-            <p class="motto">
-                Get more customers, online orders, leads or interests.
-            </p>
+<div class="d-flex w-100 h-100 justify-content-center align-items-center bg-gradient-blue">
+    <img src="/temp/static/img/strategio-shark-right.svg" alt="Stavíme ziskové weby a marketing" style="height: 100%; max-width: 100%; padding: 3rem; position: absolute; right: 0; top: 0; pointer-events: none">
+    <div class="container position-relative text-white">
+        <h1 class="display-3 font-weight-bolder mb-0 mt-5">
+            <span class="d-block h1 font-weight-bold" style="margin-bottom: -.5rem">Ziskové</span> weby a marketing
+        </h1>
+        <p class="h3 mt-4">
+            Postavte se k webu tak, aby Vám už první den po
+            <br class="d-none d-md-block">spuštění přiváděl zákazníky a <strong>vydělával reálné peníze</strong>.
+        </p>
+        <div class="d-inline-flex mt-4 mr-3">
+            <button class="btn btn-primary" disabled>
+                Domluvit si konzultaci
+            </button>
         </div>
-
-        <div class="contact">
-            <a href="mailto:get@strategio.digital" target="_blank">get@strategio.digital</a>
-            <a href="tel:+420606091125" target="_blank">+420 606 091 125</a>
+        <div class="d-none d-md-inline-flex mt-4" data-toggle="tooltip" data-placement="top" data-title="Domluvte si konzultaci ZDARMA.">
+            <button class="btn btn-outline-light" disabled style="pointer-events: none">
+                Dozvědět se více
+            </button>
         </div>
     </div>
 </div>

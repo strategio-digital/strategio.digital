@@ -1,0 +1,35 @@
+/**
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+.logo {
+  position: absolute;
+  font-weight: bolder;
+  color: $white;
+  line-height: 1;
+  margin-top: 3rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 1rem;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .sub-title {
+    color: $primary;
+    text-align: right;
+    font-size: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: .7rem;
+    }
+  }
+}

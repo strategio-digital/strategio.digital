@@ -25,6 +25,15 @@ module.exports = function ()
             // jQuery
             './node_modules/jquery/dist/jquery.js',
 
+            // Popper
+            './node_modules/popper.js/dist/umd/popper.js',
+
+            // Bootstrap
+            './node_modules/bootstrap/js/dist/index.js',
+            './node_modules/bootstrap/js/dist/util.js',
+            './node_modules/bootstrap/js/dist/tooltip.js',
+            './assets/static/js/bootstrap.js',
+
             // Conversion
             './assets/static/js/conversion-handler.js',
             './assets/static/js/conversion.js',

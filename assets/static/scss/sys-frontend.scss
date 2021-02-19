@@ -4,10 +4,26 @@
  */
 @charset "UTF-8";
 
-@import "variables";
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/variables";
+@import "vendor/bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/utilities";
+
+@import "variables";
 
 @import "components/body";
 @import "components/background";
-@import "components/container";
+@import "components/logo";
+@import "components/type";
+@import "components/list";
+@import "components/button";

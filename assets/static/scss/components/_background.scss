@@ -5,6 +5,10 @@
 
 
 .bg-gradient-blue {
-    background: $blue;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: $blue-dark;
     background: linear-gradient(180deg, $blue 0%, $blue-dark 100%);
 }
