@@ -59,7 +59,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 // Google Analytics init
-//gtag('config', 'UA-53420713-27');
+gtag('config', 'G-EGGMLHX7ZE');
 
 // Google Ads init
 //gtag('config', 'AW-677388384');
