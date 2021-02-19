@@ -1,0 +1,6 @@
+/www/temp/
+/node_modules/
+/vendor/
+/assets/dynamic/*
+/.env
+.idea

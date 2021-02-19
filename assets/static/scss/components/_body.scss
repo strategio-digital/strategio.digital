@@ -1,0 +1,15 @@
+/**
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    margin: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    background: linear-gradient(135deg, #fff 0%, #efefef 100%);
+}
