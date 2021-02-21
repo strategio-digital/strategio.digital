@@ -36,8 +36,8 @@
 
         <div class="client-container">
             {foreach $clients as $client}
-                <div class="client {if $iterator->getCounter() > 3}d-none d-sm-block{/if}">
-                    <img src="/temp/static/img/clients/{$client['image']}" alt="{$client['name']}" data-toggle="tooltip" title="{$client['name']}">
+                <div class="client{if $iterator->getCounter() > 3} d-none d-sm-block{/if}">
+                    <img src="/temp/static/img/clients/{$client['image']}" alt="{$client['name']}" data-toggle="tooltip" data-placement="top" title="{$client['name']}">
                 </div>
             {/foreach}
 

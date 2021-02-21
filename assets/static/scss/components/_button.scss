@@ -8,4 +8,11 @@
   padding: 1rem 1.5rem;
   font-weight: bold;
   color: $white;
+  @include box-shadow(0 2px 7px 0 transparentize($gray-800, .65));
+  @include transition(300ms ease all);
+
+  &:hover,
+  &:focus {
+    transform: translateY(.2rem);
+  }
 }
