@@ -28,10 +28,10 @@ class AppController extends AbstractController implements IController
         ];
 
         $this->latteParams['clients'] = [
-            ['image' => 'jihoceska-univerzita.svg', 'name' => 'Jihočeská Univerzita'],
             ['image' => 'smarttop.svg', 'name' => 'SMART TOP'],
-            ['image' => 'strechy-bohemia.svg', 'name' => 'Střechy Bohemia'],
+            ['image' => 'jihoceska-univerzita.svg', 'name' => 'Jihočeská Univerzita'],
             ['image' => 'priceminer.svg', 'name' => 'PriceMiner'],
+            ['image' => 'strechy-bohemia.svg', 'name' => 'Střechy Bohemia'],
         ];
 
         if (file_exists($file)) {
