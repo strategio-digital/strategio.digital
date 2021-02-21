@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="cs" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {block head}<meta name="robots" content="index, follow">{/block}
+    <link rel="stylesheet" href="/temp/static/css/{$assetLoader['css']}">
+</head>
+<body class="bg-gradient-blue">
+    <div class="container">
+        <a href="/" class="logo">
+            <div class="title">Strategio</div>
+            <div class="sub-title">.digital</div>
+        </a>
+    </div>
+
+    {include content}
+
+    {block modal}
+        {include './../component/modal/contact-modal.latte'}
+    {/block}
+
+    {block scripts}
+        <script src="/temp/static/js/{$assetLoader['js']}"></script>
+    {/block}
+</body>
+</html>

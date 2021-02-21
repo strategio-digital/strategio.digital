@@ -7,6 +7,14 @@
   background-color: $blue-dark;
   overflow: scroll;
 
+  img {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    fill: white;
+  }
+
   .modal-overlay {
     opacity: .1;
     position: absolute;
@@ -20,6 +28,15 @@
     position: absolute;
     right: 3rem;
     top: 3rem;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    font-size: 1.5rem;
+
+    svg {
+      fill: $white;
+      width: 40px;
+    }
   }
 
   .modal-dialog {
@@ -36,8 +53,24 @@
 
     .modal-content {
       border: none;
-      background-color: transparentize($blue-dark, .1);
-      color: $white;
+      background-color: $white;
+      color: $blue-dark;
+
+      .h1 {
+        @include media-breakpoint-down(sm) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .h5 {
+        @include media-breakpoint-down(sm) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .form-container {
+      background-color: $gray-200;
     }
   }
 }

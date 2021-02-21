@@ -36,12 +36,12 @@ module.exports = function ()
             './node_modules/bootstrap/js/dist/tooltip.js',
             './assets/static/js/bootstrap.js',
 
+            // jQuery validate
+            './node_modules/jquery-validation/dist/jquery.validate.js',
+            './node_modules/jquery-validation/dist/localization/messages_cs.js',
+
             // Contact form
             './assets/static/js/contact-form.js',
-
-            // Conversion
-            './assets/static/js/conversion-handler.js',
-            './assets/static/js/conversion.js',
         ],
 
         file:

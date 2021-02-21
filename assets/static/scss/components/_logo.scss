@@ -9,6 +9,13 @@
   color: $white;
   line-height: 1;
   margin-top: 3rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+  }
 
   @include media-breakpoint-down(sm) {
     margin-top: 1rem;

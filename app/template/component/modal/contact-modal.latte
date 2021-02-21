@@ -1,0 +1,67 @@
+{*
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ *}
+
+{varType array $persons}
+
+<div id="contact-modal" class="modal fade" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="overflow-hidden position-absolute w-100 h-100">
+            <img src="/temp/static/img/strategio-shark-right.svg" alt="Stavíme ziskové weby a marketing" style="pointer-events: none; margin: 3rem;">
+        </div>
+        <div class="modal-content position-absolute border-0 d-none d-md-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+                    <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/>
+                </svg>
+                <br><span class="small">zavřít okno</span>
+            </button>
+        </div>
+        <div class="d-flex align-items-center contact-modal">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="modal-content py-4 py-md-5 px-4 px-md-5 shadow-lg">
+                            <div class="h1 mb-0 font-weight-bold">Domluvte si konzultaci</div>
+                            <div class="d-xl-flex mb-4 mb-md-5">
+                                {foreach $persons as $person}
+                                    <div class="contact-person">
+                                        <img src="/temp/static/img/{$person['photo']}" alt="{$person['name']}" class="rounded-circle">
+                                        <div class="ml-3">
+                                            <div class="font-weight-bold">{$person['name']}</div>
+                                            <a href="mailto:{$person['email']}" target="_blank">{$person['email']}</a>
+                                            <a href="tel:{$person['phone']|replace:' '}" target="_blank">{$person['phone']}</a>
+                                        </div>
+                                    </div>
+                                {/foreach}
+                            </div>
+                            <div class="p-4 p-md-5 form-container">
+                                <div class="h5 mb-3 font-weight-bold">
+                                    Nebo se Vám máme ozvat?
+                                </div>
+                                <form id="contactForm">
+                                    <div class="form-group mb-4">
+                                        <input type="text" name="contact" class="form-control" placeholder="Zadejte Váš telefon / e-mail">
+                                    </div>
+                                    <input name="token" type="hidden" value="{php echo bin2hex(random_bytes(16))}">
+                                    <button type="submit" name="save" class="btn btn-lg btn-primary">
+                                        Domluvit si konzultaci
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="mt-4 mt-md-5">
+                                <button type="button" class="border-0 p-0 bg-transparent" data-dismiss="modal" aria-label="Close" role="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 16px; margin-right: 8px">
+                                        <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/>
+                                    </svg>
+                                    <span class="font-weight-bold">Zpět</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
