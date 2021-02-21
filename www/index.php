@@ -17,7 +17,7 @@ $routerFactory = new Strategio\Router\RouterFactory;
 $urlMatcher = $routerFactory->createRoutes();
 $controllerData = $routerFactory->matchAsController($urlMatcher);
 
-$action = $controllerData['_action'];
+$action = isset($controllerData['_action']) ? $controllerData['_action'] : 'index';
 $template = isset($controllerData['template']) ? $controllerData['template'] : 'home';
 
 
