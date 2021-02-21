@@ -7,8 +7,9 @@
 {/block}
 
 {block content}
-    <div class="d-flex w-100 h-100 justify-content-center align-items-center bg-gradient-blue">
-        <img src="/temp/static/img/strategio-shark-right.svg" alt="Stavíme ziskové weby a marketing" style="height: 100%; max-width: 100%; padding: 3rem; position: absolute; right: 0; top: 0; pointer-events: none">
+    <img src="/temp/static/img/strategio-shark-right.svg" alt="Stavíme ziskové weby a marketing" style="height: 100%; max-width: 100%; padding: 3rem; position: absolute; right: 0; top: 0; pointer-events: none">
+    <div class="d-flex w-100 h-100 justify-content-between flex-column bg-gradient-blue">
+        <div></div>
         <div class="container position-relative text-white">
             <h1 class="display-3 font-weight-bolder mb-0 mt-5">
                 <span class="d-block h1 font-weight-bold" style="margin-bottom: -.5rem">Ziskové</span> weby a marketing
@@ -26,6 +27,19 @@
                 <button class="btn btn-outline-light" disabled style="pointer-events: none">
                     Dozvědět se více
                 </button>
+            </div>
+        </div>
+
+        <div class="client-container">
+            {foreach $clients as $client}
+                <div class="client {if $iterator->getCounter() > 3}d-none d-sm-block{/if}">
+                    <img src="/temp/static/img/clients/{$client['image']}" alt="{$client['name']}" data-toggle="tooltip" title="{$client['name']}">
+                </div>
+            {/foreach}
+
+            <div class="client client-last">
+                +130 <span class="d-none d-sm-inline">dalších</span> klientů
+                <div class="d-none d-sm-block">a zisk generujících webů...</div>
             </div>
         </div>
     </div>

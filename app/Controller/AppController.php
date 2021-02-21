@@ -24,7 +24,14 @@ class AppController extends AbstractController implements IController
         $file = __DIR__ . "/../template/presenter/{$template}.latte";
 
         $this->latteParams['persons'] = [
-            ['name' => 'CEO, Jiří Zapletal', 'phone' => '+420 606 091 125', 'email' => 'jz@strategio.digital', 'photo' => 'zapletal-sm-white.png']
+            ['name' => 'Jiří Zapletal, CEO', 'phone' => '+420 606 091 125', 'email' => 'jz@strategio.digital', 'photo' => 'zapletal-sm-white.png']
+        ];
+
+        $this->latteParams['clients'] = [
+            ['image' => 'jihoceska-univerzita.svg', 'name' => 'Jihočeská Univerzita'],
+            ['image' => 'smarttop.svg', 'name' => 'SMART TOP'],
+            ['image' => 'strechy-bohemia.svg', 'name' => 'Střechy Bohemia'],
+            ['image' => 'priceminer.svg', 'name' => 'PriceMiner'],
         ];
 
         if (file_exists($file)) {
