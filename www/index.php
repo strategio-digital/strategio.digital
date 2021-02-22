@@ -9,7 +9,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = new Symfony\Component\Dotenv\Dotenv();
 $dotenv->load(__DIR__ . '/../.env');
-$debugMode = $_ENV['PRODUCTION_MODE'] == '0' ? Tracy\Debugger::DEVELOPMENT : Tracy\Debugger::PRODUCTION;
+$debugMode = $_ENV['PRODUCTION_MODE'] === '0' ? Tracy\Debugger::DEVELOPMENT : Tracy\Debugger::PRODUCTION;
 
 Tracy\Debugger::enable($debugMode, __DIR__ . '/../log');
 
