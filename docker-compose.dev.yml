@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  strategio-network:
+
+services:
+  app:
+    build: .
+    restart: "no"
+    networks:
+      - strategio-network
+    ports:
+      - 80:80
+    volumes:
+      - ./.env:/var/www/html/.env
+      - ./.htaccess:/var/www/html/.htaccess
+      - ./app:/var/www/html/app
+      - ./cache:/var/www/html/cache
+      - ./log:/var/www/html/log
+      - ./vendor:/var/www/html/vendor
+      - ./www:/var/www/html/www
